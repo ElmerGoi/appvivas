@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">vista horizontal</string>
+    <string name="vista_vertical">Vista vertical</string>
 </resources>

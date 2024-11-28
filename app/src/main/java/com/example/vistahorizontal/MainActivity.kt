@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         menuButton.setOnClickListener { showPopupMenu(menuButton) }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun initializeCalculator() {
         tv_num1 = findViewById(R.id.tv_num1)
         tv_num2 = findViewById(R.id.tv_num2)
@@ -57,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     fun clicNumero(view: View) {
         val num2 = tv_num2.text.toString()
         when (view.id) {
@@ -74,6 +76,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     fun clicOperacion(view: View) {
         val num2 = tv_num2.text.toString().toDoubleOrNull() ?: return
         numero1 = num2
@@ -108,6 +111,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.action_option1 -> {
                     // Cambiar a la vista de calculadora
                     setContentView(R.layout.calculadora)
+                    // Inicializar nuevamente la calculadora después de cambiar la vista
                     initializeCalculator()
                     true
                 }
